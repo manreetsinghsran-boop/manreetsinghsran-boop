@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+   
+ 
+    
+    <!-- </div> -->
+    
+     <!-- <div class="container">
+        <div id="div1" , class="class1"><a href="#"> View </a></div>
+        <div id="div2" , class="class1"><a href="#"> Home </a></div>
+        <div id="div3" , class="class1"><a href="#"> Edit </a></div>
+        <div id="div4" , class="class1"><a href="#"> Review </a></div>
+        <div id="div5" , class="class1"><a href="#"> Settings </a></div>
+     </div> -->
+
+<!-- <div id="one">
+
+
+</div> -->
+
+<!-- <div id="two"> 
+     HELLO 
+</div> -->
+<!-- <div id="three"> 
+     HELLO 
+</div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Outer Banks | By Manreet</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #071c23;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: #06151b;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #ffc766;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffc766;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    position: relative;
+
+    /* Replace this URL with a direct beach-house photo URL
+       if the image does not load. */
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 15, 20, 0.80),
+            rgba(3, 15, 20, 0.18)
+        ),
+        url("https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 750px;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1.5s ease;
+}
+
+.eyebrow {
+    color: #ffc766;
+    letter-spacing: 6px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 9vw, 105px);
+    line-height: 1;
+    letter-spacing: 4px;
+    color: #fff1d1;
+    text-shadow: 0 5px 25px black;
+}
+
+.hero-description {
+    margin-top: 25px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+
+/* YOUR NAME */
+
+.byline {
+    color: #ffc766;
+    font-family: cursive;
+    font-size: clamp(38px, 6vw, 62px);
+    font-weight: bold;
+    margin-top: 22px;
+    text-shadow: 0 0 20px rgba(255, 166, 58, 0.65);
+    animation: nameGlow 3s ease-in-out infinite alternate;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 28px;
+    border: 1px solid #ffc766;
+    color: white;
+    background: transparent;
+    text-decoration: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffc766;
+    color: #071c23;
+    transform: translateY(-4px);
+}
+
+/* ANIMATED WAVES */
+
+.wave {
+    position: absolute;
+    bottom: -2px;
+    left: -10%;
+    width: 120%;
+    height: 55px;
+    background: #071c23;
+    border-radius: 50% 50% 0 0;
+    animation: waveMove 5s ease-in-out infinite alternate;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(30px, 5vw, 42px);
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.gold {
+    color: #ffc766;
+}
+
+.subtitle {
+    text-align: center;
+    color: #b8c8ca;
+    margin-bottom: 42px;
+    line-height: 1.7;
+}
+
+/* POGUES CHARACTER CARDS */
+
+.characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.character-card {
+    background: #102d35;
+    border: 1px solid #345057;
+    overflow: hidden;
+    transition: transform 0.4s, border-color 0.4s;
+}
+
+.character-card:hover {
+    transform: translateY(-10px);
+    border-color: #ffc766;
+}
+
+.character-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.character-card:hover img {
+    transform: scale(1.06);
+}
+
+.character-info {
+    padding: 20px;
+}
+
+.character-info h3 {
+    color: #ffc766;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.character-info p {
+    color: #c3d0d1;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* STORY SECTION */
+
+.story {
+    text-align: center;
+    background:
+        linear-gradient(rgba(5, 25, 31, 0.90), rgba(5, 25, 31, 0.95)),
+        url("https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1600&q=80")
+        center / cover;
+}
+
+.story p {
+    max-width: 760px;
+    margin: 22px auto;
+    color: #d0dddd;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.quote {
+    margin-top: 30px;
+    color: #ffc766;
+    font-size: 24px;
+    font-family: cursive;
+}
+
+/* TREASURE SECTION */
+
+.treasure {
+    text-align: center;
+}
+
+#clue {
+    display: none;
+    max-width: 520px;
+    margin: 25px auto;
+    padding: 25px;
+    border: 1px dashed #ffc766;
+    color: #ffc766;
+    line-height: 1.8;
+    background: #102d35;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    background: #031116;
+    color: #b8c8ca;
+    line-height: 2;
+}
+
+footer strong {
+    color: #ffc766;
+    letter-spacing: 3px;
+}
+
+.footer-name {
+    font-family: cursive;
+    color: #ffc766;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes nameGlow {
+    from {
+        text-shadow: 0 0 8px rgba(255, 166, 58, 0.3);
+    }
+    to {
+        text-shadow: 0 0 24px rgba(255, 166, 58, 0.9);
+    }
+}
+
+@keyframes waveMove {
+    from {
+        transform: translateX(-2%) rotate(-2deg);
+    }
+    to {
+        transform: translateX(2%) rotate(2deg);
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+    nav {
+        padding: 18px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 78vh;
+        padding: 55px 7%;
+        background-position: center;
+    }
+
+    .hero h1 {
+        letter-spacing: 1px;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="logo">OBX.</div>
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#pogues">Pogues</a>
+        <a href="#story">Story</a>
+        <a href="#treasure">Treasure</a>
+    </div>
+</nav>
+
+<!-- HERO / BEACH HOUSE -->
+
+<header class="hero" id="home">
+    <div class="hero-content">
+
+        <p class="eyebrow">WELCOME TO PARADISE</p>
+
+        <h1>OUTER<br>BANKS</h1>
+
+        <p class="hero-description">
+            SAME BEACH. DIFFERENT WORLDS.<br>
+            ONE CREW. ENDLESS ADVENTURES.
+        </p>
+
+        <p class="byline">By Manreet ♡</p>
+
+        <a href="#pogues" class="btn">MEET THE POGUES ↓</a>
+
+    </div>
+
+    <div class="wave"></div>
+</header>
+
+<!-- THE POGUES -->
+
+<section id="pogues">
+
+    <h2 class="section-title">
+        MEET THE <span class="gold">POGUES</span>
+    </h2>
+
+    <p class="subtitle">
+        Friends. Rivals. Family. Pogues forever.
+    </p>
+
+    <div class="characters">
+
+        <article class="character-card">
+            <img
+                src="https://cdn.mos.cms.futurecdn.net/VMuAG6twnSUcS8PLjQ97Lh-2000-80.jpg"
+                alt="John B and the Outer Banks cast"
+                loading="lazy">
+
+            <div class="character-info">
+                <h3>John B Routledge</h3>
+                <p>The fearless leader chasing a mystery bigger than himself.</p>
+            </div>
+        </article>
+
+        <article class="character-card">
+            <img
+                src="https://hips.hearstapps.com/hmg-prod/images/madelyn-cline-as-sarah-cameron-rudy-pankow-as-jj-jonathan-daviss-as-pope-chase-stokes-as-john-b-and-madison-bailey-in-episode-210-of-outer-banks-1627831571.jpg"
+                alt="JJ Maybank and the Pogues"
+                loading="lazy">
+
+            <div class="character-info">
+                <h3>JJ Maybank</h3>
+                <p>The wild card, loyal friend, and fearless adventurer.</p>
+            </div>
+        </article>
+
+        <article class="character-card">
+            <img
+                src="https://hips.hearstapps.com/hmg-prod/images/madelyn-cline-as-sarah-cameron-rudy-pankow-as-jj-jonathan-daviss-as-pope-chase-stokes-as-john-b-and-madison-bailey-in-episode-210-of-outer-banks-1627831571.jpg"
+                alt="Sarah Cameron and the Pogues"
+                loading="lazy">
+
+            <div class="character-info">
+                <h3>Sarah Cameron</h3>
+                <p>A Kook who discovers where her heart truly belongs.</p>
+            </div>
+        </article>
+
+        <article class="character-card">
+            <img
+                src="https://cdn.mos.cms.futurecdn.net/VMuAG6twnSUcS8PLjQ97Lh-2000-80.jpg"
+                alt="Kiara and the Outer Banks crew"
+                loading="lazy">
+
+            <div class="character-info">
+                <h3>Kiara Carrera</h3>
+                <p>Independent, passionate, and always there for her crew.</p>
+            </div>
+        </article>
+
+        <article class="character-card">
+            <img
+                src="https://hips.hearstapps.com/hmg-prod/images/madelyn-cline-as-sarah-cameron-rudy-pankow-as-jj-jonathan-daviss-as-pope-chase-stokes-as-john-b-and-madison-bailey-in-episode-210-of-outer-banks-1627831571.jpg"
+                alt="Pope and the Outer Banks crew"
+                loading="lazy">
+
+            <div class="character-info">
+                <h3>Pope Heyward</h3>
+                <p>The smart one whose ideas help the crew through trouble.</p>
+            </div>
+        </article>
+
+        <article class="character-card">
+            <img
+                src="https://cdn.mos.cms.futurecdn.net/VMuAG6twnSUcS8PLjQ97Lh-2000-80.jpg"
+                alt="Cleo and the Outer Banks cast"
+                loading="lazy">
+
+            <div class="character-info">
+                <h3>Cleo</h3>
+                <p>Fearless, sharp, and always ready for the next adventure.</p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- STORY -->
+
+<section class="story" id="story">
+
+    <h2 class="section-title">
+        POGUES <span class="gold">FOR LIFE</span>
+    </h2>
+
+    <p>
+        On the Outer Banks, two worlds collide.
+        A group of friends sets out on a dangerous treasure hunt
+        that changes everything. Between loyalty, mystery, and adventure,
+        one thing matters most: the crew.
+    </p>
+
+    <div class="quote">
+        "It's not just a place. It's a feeling." ♡
+    </div>
+
+</section>
+
+<!-- TREASURE HUNT -->
+
+<section class="treasure" id="treasure">
+
+    <h2 class="section-title">
+        THE <span class="gold">TREASURE HUNT</span>
+    </h2>
+
+    <p class="subtitle">
+        Every treasure begins with a clue. Are you ready?
+    </p>
+
+    <button class="btn" onclick="revealClue()">
+        REVEAL THE CLUE
+    </button>
+
+    <div id="clue">
+        🌊 YOUR FIRST CLUE 🌊<br><br>
+        Follow the setting sun, listen to the ocean,
+        and look where the old wooden dock meets the shore.
+        Your adventure starts there!
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <strong>ONCE A POGUE, ALWAYS A POGUE.</strong>
+
+    <p>Welcome to my little Outer Banks world.</p>
+
+    <p class="footer-name">Made by Manreet ♡</p>
+</footer>
+
+<script>
+function revealClue() {
+    const clue = document.getElementById("clue");
+
+    if (clue.style.display === "block") {
+        clue.style.display = "none";
+    } else {
+        clue.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
